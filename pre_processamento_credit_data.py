@@ -20,3 +20,18 @@ base.mean()
 base['age'].mean()
 base['age'][base.age > 0].mean()
 base.loc[base.age < 0, 'age'] = 40.92
+
+# Localizar valores faltantes
+pd.isnull(base.age) #1
+pd.isnull(base['age']) #2
+base.loc[pd.isnull(base.age)]
+
+# Separando dados
+previsores = base.iloc[:,1:4].values
+classe = base.iloc[:,4].values
+
+from sklearn.impute import SimpleImputer
+#imputer = SimpleImputer(missing_values='None', strategy='mean')
+imputer = SimpleImputer()
+imputer = imputer.fit(previsores[:,0:3])
+previsores[:,0:3] = imputer.transform(previsores[:,0:3])
