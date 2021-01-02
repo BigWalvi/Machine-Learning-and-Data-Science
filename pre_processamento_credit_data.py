@@ -30,8 +30,14 @@ base.loc[pd.isnull(base.age)]
 previsores = base.iloc[:,1:4].values
 classe = base.iloc[:,4].values
 
+# Substituindo valores faltantes
 from sklearn.impute import SimpleImputer
 #imputer = SimpleImputer(missing_values='None', strategy='mean')
 imputer = SimpleImputer()
 imputer = imputer.fit(previsores[:,0:3])
 previsores[:,0:3] = imputer.transform(previsores[:,0:3])
+
+# Escalonamento/Padronização dos dados
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+previsores = scaler.fit_transform(previsores)
