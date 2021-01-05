@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Jan  3 13:10:20 2021
+Created on Tue Jan  5 15:53:08 2021
 
 @author: Walvi
 """
@@ -26,3 +26,14 @@ previsores = scaler.fit_transform(previsores)
 
 from sklearn.model_selection import train_test_split
 previsores_treinamento, previsores_teste, classe_treinamento, classe_teste = train_test_split(previsores, classe, test_size=0.15, random_state=0)
+
+from sklearn.tree import DecisionTreeClassifier
+classificador = DecisionTreeClassifier(criterion='entropy', random_state=0)
+classificador.fit(previsores_treinamento, classe_treinamento)
+previsoes = classificador.predict(previsores_teste)
+
+from sklearn.metrics import accuracy_score, confusion_matrix
+precisao = accuracy_score(classe_teste, previsoes)
+matriz = confusion_matrix(classe_teste, previsoes)
+
+
