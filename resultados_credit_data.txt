@@ -2,3 +2,4 @@ Credit Data
 ----------------------------------------------------------------------
 0.938 - Naive Bayes
 0.982 - Árvore de Decisão
+0.98  - Random Forest - n_esstimators = 50
