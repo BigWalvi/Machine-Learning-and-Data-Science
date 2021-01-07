@@ -1,7 +1,10 @@
 Census
 ----------------------------------------------------------------------
+0.755 - Base Line Classifier
 0.805 - Naive Bayes
 0.810 - Árvore de Decisão
 0.848 - Random Forest - n_estimators = 50
 0.849 - Random Forest - n_estimators = 50 - Sem Scaler
+0.788 - Regras - CN2
+
 

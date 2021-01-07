@@ -1,5 +1,7 @@
 Credit Data
 ----------------------------------------------------------------------
+0.872 - Base Line Classifier
 0.938 - Naive Bayes
 0.982 - Árvore de Decisão
-0.98  - Random Forest - n_esstimators = 50
+0.980 - Random Forest - n_esstimators = 50
+0.972 - Regras - CN2
