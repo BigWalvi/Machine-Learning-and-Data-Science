@@ -6,5 +6,7 @@ Census
 0.848 - Random Forest - n_estimators = 50
 0.849 - Random Forest - n_estimators = 50 - Sem Scaler
 0.788 - Regras - CN2
-
+=====KNN=====
+0.776 - KNN sem Scaler
+0.822 - KNN com Scaler
 
