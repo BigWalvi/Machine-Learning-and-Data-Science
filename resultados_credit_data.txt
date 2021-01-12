@@ -5,6 +5,6 @@ Credit Data
 0.982 - Árvore de Decisão
 0.980 - Random Forest - n_esstimators = 50
 0.972 - Regras - CN2
-====== KNN ======
 0.836 - KNN SEM scaler
 0.986 - KNN COM scaler
+0.946 - Regressão Logística

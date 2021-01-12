@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Jan  3 13:10:20 2021
+Created on Tue Jan 12 10:36:11 2021
 
 @author: Walvi
 """
@@ -27,14 +27,11 @@ previsores = scaler.fit_transform(previsores)
 from sklearn.model_selection import train_test_split
 previsores_treinamento, previsores_teste, classe_treinamento, classe_teste = train_test_split(previsores, classe, test_size=0.15, random_state=0)
 
-from import
-classificador =
+from sklearn.linear_model import LogisticRegression
+classificador = LogisticRegression(random_state=1)
 classificador.fit(previsores_treinamento, classe_treinamento)
 previsoes = classificador.predict(previsores_teste)
 
 from sklearn.metrics import confusion_matrix, accuracy_score
 precisao = accuracy_score(classe_teste, previsoes)
 matriz = confusion_matrix(classe_teste, previsoes)
-
-from collections import Counter
-Counter(classe_teste)
