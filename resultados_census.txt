@@ -18,4 +18,6 @@ Census
 
 0.850 - SVM
 
-0.830 - Rede Neural
+0.830 - Rede Neural SKLearn
+
+0.821 - Rede Neural Keras

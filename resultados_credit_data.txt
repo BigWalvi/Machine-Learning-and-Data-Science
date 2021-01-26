@@ -13,5 +13,7 @@ Credit Data
 0.982 - SVM - rbf
 0.838 - SVM - sigmoid
 0.982 - SVM - rbf, C=2.0
-0.996 - Redes Neurais 2 neorônios por camada em 1 camada oculta
-0.998 - Redes Neurais 2 neorônios por camada em 2 camada oculta
+0.996 - Redes Neurais 2 neorônios por camada em 1 camada oculta - SKLearn
+0.998 - Redes Neurais 2 neorônios por camada em 2 camada oculta - SKLearn
+0.990 - Redes Neurais 2 neorônios por camada em 2 camada oculta - Keras
+
