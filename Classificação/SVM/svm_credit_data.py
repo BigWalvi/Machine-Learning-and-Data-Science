@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jan 19 09:07:59 2021
+
+@author: warve
+"""
 import pandas as pd
 
 base = pd.read_csv('credit_data.csv')
@@ -18,8 +24,8 @@ previsores = scaler.fit_transform(previsores)
 from sklearn.model_selection import train_test_split
 previsores_treinamento, previsores_teste, classe_treinamento, classe_teste = train_test_split(previsores, classe, test_size=0.25, random_state=0)
 
-from import
-classificador =
+from sklearn.svm import SVC
+classificador = SVC(kernel='rbf', random_state=1, C=2.0)
 classificador.fit(previsores_treinamento, classe_treinamento)
 previsoes = classificador.predict(previsores_teste)
 
@@ -29,7 +35,6 @@ matriz = confusion_matrix(classe_teste, previsoes)
 
 from collections import Counter
 Counter(classe_teste)
-
 
 
 

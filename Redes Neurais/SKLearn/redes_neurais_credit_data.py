@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Jan 25 13:20:42 2021
+
+@author: warve
+"""
 import pandas as pd
 
 base = pd.read_csv('credit_data.csv')
@@ -18,41 +24,16 @@ previsores = scaler.fit_transform(previsores)
 from sklearn.model_selection import train_test_split
 previsores_treinamento, previsores_teste, classe_treinamento, classe_teste = train_test_split(previsores, classe, test_size=0.25, random_state=0)
 
-from import
-classificador =
+from sklearn.neural_network import MLPClassifier
+classificador = MLPClassifier(verbose=True,
+                              max_iter=1000,
+                              tol=0.000010,
+                              solver='adam',
+                              hidden_layer_sizes=(2, 2),
+                              activation='relu')
 classificador.fit(previsores_treinamento, classe_treinamento)
 previsoes = classificador.predict(previsores_teste)
 
 from sklearn.metrics import confusion_matrix, accuracy_score
 precisao = accuracy_score(classe_teste, previsoes)
 matriz = confusion_matrix(classe_teste, previsoes)
-
-from collections import Counter
-Counter(classe_teste)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

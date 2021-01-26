@@ -16,3 +16,6 @@ Census
 
 0.849 - Regressão Logística
 
+0.850 - SVM
+
+0.830 - Rede Neural

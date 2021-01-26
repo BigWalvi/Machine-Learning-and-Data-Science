@@ -8,3 +8,10 @@ Credit Data
 0.836 - KNN SEM scaler
 0.986 - KNN COM scaler
 0.946 - Regressão Logística
+0.946 - SVM - linear
+0.968 - SVM - poly
+0.982 - SVM - rbf
+0.838 - SVM - sigmoid
+0.982 - SVM - rbf, C=2.0
+0.996 - Redes Neurais 2 neorônios por camada em 1 camada oculta
+0.998 - Redes Neurais 2 neorônios por camada em 2 camada oculta
