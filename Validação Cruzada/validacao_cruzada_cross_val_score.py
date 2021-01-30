@@ -20,3 +20,11 @@ previsores[:,0:3] = imputer.transform(previsores)
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 previsores = scaler.fit_transform(previsores)
+
+from sklearn.model_selection import cross_val_score
+from sklearn.naive_bayes import GaussianNB
+classificador = GaussianNB()
+
+resultados = cross_val_score(classificador, previsores, classe, cv=10)
+resultados.mean()
+resultados.std()
